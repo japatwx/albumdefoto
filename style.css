@@ -1,0 +1,70 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0 20px 0;
+}
+
+/* Galeria de fotos */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+    border-radius: 10px;
+}
+
+/* Animação ao passar o mouse */
+.photo:hover {
+    transform: scale(1.05);
+}
+
+.photo:hover img {
+    transform: scale(1.2);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
